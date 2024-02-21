@@ -10,8 +10,6 @@ namespace Week14CompetitionTaskProjectMars.Utilities
 {
     public class CommonDriver
     {
-       // public static IWebDriver driver1;
-        //public static IWebDriver driver2;
         public static IWebDriver CreateNewDriver()
         {
 

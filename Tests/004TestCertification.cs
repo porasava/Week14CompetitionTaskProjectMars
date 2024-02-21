@@ -24,11 +24,7 @@ namespace Week14CompetitionTaskProjectMars.Tests
      [SetUp]
      public new void Initialize()
      {
-       //driver1 = CommonDriver.CreateNewDriver();
-     //  base.Initialize();
-            //test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
-           // test = GlobalReport.extent.CreateTest(TestContext.CurrentContext.Test.Name);
-            string jsonFilePathLogin = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestData", "TestDataLogin.json");
+       string jsonFilePathLogin = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestData", "TestDataLogin.json");
        _LoginModel = JsonReader.ReadLoginData(jsonFilePathLogin);
        string jsonFilePathEducation = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestData", "TestDataEducation.json");
        _EducationModel = JsonReader.ReadEducationData(jsonFilePathEducation);
@@ -52,8 +48,8 @@ namespace Week14CompetitionTaskProjectMars.Tests
              LoginPageObj.NavigateToSkillsWeb();
              LoginPageObj.InputUsernameAndPassword(loginModel.username, loginModel.password);
              LoginPageObj.ClickOnLogin();
-                StepCertificationObj.CheckExistingCertification();
-                StepCertificationObj.StepAddANewCertification(certificationModel.certificationName, certificationModel.certificationFrom, certificationModel.CertificationYear);
+             StepCertificationObj.CheckExistingCertification();
+             StepCertificationObj.StepAddANewCertification(certificationModel.certificationName, certificationModel.certificationFrom, certificationModel.CertificationYear);
              StepCertificationObj.StepPopupCertificationShouldBeAddSuccessfully();
              StepCertificationObj.StepDeleteCertification(certificationModel.certificationName);
              StepCertificationObj.StepPopupCertificationShouldDeleteSuccessfully();
